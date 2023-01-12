@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args){
 
@@ -45,18 +43,27 @@ public class Main {
 
 //        Movie movie = Movie.getMovie("Science", "Star Wars");
 //        movie.watchMovie();
-        Scanner s = new Scanner(System.in);
-        while (true){
-            System.out.println("Enter Type(A for Aventure, C for Comedy, S for Science or Q to quit)");
-            String type = s.nextLine();
-            if("Qq".contains(type)) break;
-            System.out.print("Enter  Moive Title: ");
-            String title = s.nextLine();
-            Movie movie = Movie.getMovie(type, title);
-            movie.watchMovie();
-        }
+//        Scanner s = new Scanner(System.in);
+//        while (true){
+//            System.out.println("Enter Type(A for Aventure, C for Comedy, S for Science or Q to quit)");
+//            String type = s.nextLine();
+//            if("Qq".contains(type)) break;
+//            System.out.print("Enter  Moive Title: ");
+//            String title = s.nextLine();
+//            Movie movie = Movie.getMovie(type, title);
+//            movie.watchMovie();
+//        }
+
+        Car car = new Car("2022 Ferrari");
+        runRace(car);
+        Car ferrari = new ElectricCar("2021 Ferrar", 15.6, 6);
+        runRace(ferrari);
     }
 
+    public static void runRace(Car car){
+        car.runEngine();
+        car.drive();
+    }
 
 }
 

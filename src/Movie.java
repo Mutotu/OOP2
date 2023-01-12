@@ -16,6 +16,9 @@ public class Movie {
             default -> new Movie(title);
         };
     }
+    public  void watchAdventure(){
+        System.out.println("wathing am Adventure");
+    }
 }
 class Adventure extends  Movie {
     public Adventure(String title) {
@@ -41,6 +44,9 @@ class Comedy extends  Movie {
         System.out.printf(".. %s%n".repeat(3),
                 "Something Funny","Funny", "Something Funny Happens");
     }
+    public  void watchComedy(){
+        System.out.println("wathing am Comdey");
+    }
 }
 
 class ScienceFiction extends  Movie {
@@ -53,5 +59,8 @@ class ScienceFiction extends  Movie {
         super.watchMovie();
         System.out.printf(".. %s%n".repeat(3),
                 "Something Science","Science", "Something Science Happens");
+    }
+    public  void watchScienceFiction(){
+        System.out.println("wathing am Science");
     }
 }
